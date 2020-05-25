@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hunterclub.AddJournalController">
+   <children>
+      <AnchorPane fx:id="content" layoutX="54.0" layoutY="284.0" prefHeight="272.0" prefWidth="576.0" style="-fx-background-color: #E5E5E5;">
+         <children>
+            <Button layoutX="191.0" layoutY="232.0" mnemonicParsing="false" onAction="#AjouterJournal" style="-fx-background-color: #30A202;" text="Ajouter" textFill="#fff6f6" />
+            <TextField fx:id="fxnbchasse" layoutX="14.0" layoutY="108.0" onKeyTyped="#verifier_nbchasse" prefHeight="28.0" prefWidth="216.0" promptText="Nombre chasse" />
+            <Button cancelButton="true" layoutX="261.0" layoutY="232.0" mnemonicParsing="false" onAction="#vider" prefHeight="25.0" prefWidth="55.0" text="Vider" />
+            <Label layoutX="75.0" layoutY="10.0" text="Ajouter Journal" textFill="#0593ff">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="21.0" fitWidth="25.0" layoutX="41.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../tn/pidev/gui/images/add.png" />
+               </image>
+            </ImageView>
+            <DatePicker fx:id="fxdate" layoutX="280.0" layoutY="27.0" onInputMethodTextChanged="#verifier_date" onMouseEntered="#date" prefHeight="21.0" prefWidth="249.0" />
+            <TextArea fx:id="fxdescription" layoutX="280.0" layoutY="61.0" prefHeight="111.0" prefWidth="249.0" promptText="Description" />
+            <Label fx:id="id_verifier_animal" layoutX="94.0" layoutY="31.0" prefHeight="17.0" prefWidth="127.0" />
+            <Label fx:id="id_verifier_nbchasse" layoutX="126.0" layoutY="83.0" prefHeight="17.0" prefWidth="97.0" />
+            <Label fx:id="id_verifier_lieu" layoutX="95.0" layoutY="139.0" prefHeight="17.0" prefWidth="127.0" />
+            <Label fx:id="id_verifier_date" layoutX="340.0" layoutY="6.0" prefHeight="17.0" prefWidth="110.0" />
+            <Button fx:id="image" layoutX="19.0" layoutY="197.0" mnemonicParsing="false" onAction="#imagechooser" prefHeight="25.0" prefWidth="118.0" text="Telecharger image.." />
+            <Label fx:id="lmla" layoutX="150.0" layoutY="201.0" prefHeight="17.0" prefWidth="81.0" />
+            <ComboBox fx:id="typeevent" layoutX="280.0" layoutY="189.0" onAction="#verif_combo" prefHeight="25.0" prefWidth="249.0" />
+            <Label fx:id="idcombo" layoutX="352.0" layoutY="170.0" prefHeight="17.0" prefWidth="140.0" />
+            <ComboBox fx:id="fxanimal" layoutX="13.0" layoutY="50.0" onAction="#verif_animal" prefHeight="25.0" prefWidth="210.0" />
+            <ComboBox fx:id="fxlieu" layoutX="13.0" layoutY="160.0" onAction="#verif_lieu" prefHeight="25.0" prefWidth="216.0" />
+            <Label layoutX="23.0" layoutY="31.0" text="Animal" textFill="#195bd7">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font></Label>
+            <Label layoutX="14.0" layoutY="82.0" text="Nombre Chasse" textFill="#195bd7">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="19.0" layoutY="138.0" text="Lieu" textFill="#195bd7">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="280.0" layoutY="5.0" text="Date" textFill="#195bd7">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="281.0" layoutY="170.0" text="Evenement" textFill="#195bd7">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <Button layoutX="51.0" layoutY="561.0" mnemonicParsing="false" onAction="#afficherjournal" prefHeight="25.0" prefWidth="63.0" text="Refresh" />
+      <TableView fx:id="fxafficher" layoutX="56.0" layoutY="39.0" prefHeight="235.0" prefWidth="576.0">
+        <columns>
+          <TableColumn fx:id="colanimal" prefWidth="91.0" text="animal" />
+            <TableColumn fx:id="colnbchasse" prefWidth="101.0" text="nbchasse" />
+            <TableColumn fx:id="collieu" prefWidth="94.0" text="Lieu" />
+            <TableColumn fx:id="coldate" prefWidth="97.0" text="Date" />
+            <TableColumn fx:id="coldesc" prefWidth="192.0" text="Description" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnsupprimer" layoutX="649.0" layoutY="62.0" mnemonicParsing="false" onAction="#supprimerJournal" style="-fx-background-color: jj;" />
+      <Label fx:id="labelsupp" layoutX="632.0" layoutY="87.0" prefHeight="17.0" prefWidth="40.0" />
+      <Button fx:id="btnupdate" layoutX="628.0" layoutY="116.0" mnemonicParsing="false" onAction="#updateJournal" prefHeight="25.0" prefWidth="40.0" style="-fx-background-color: transapaent;" />
+      <Label fx:id="modifylabel" layoutX="636.0" layoutY="143.0" prefHeight="17.0" prefWidth="46.0" />
+      <ImageView fx:id="updateimg" fitHeight="21.0" fitWidth="28.0" layoutX="634.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../tn/pidev/gui/images/update.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="deleteimage" fitHeight="21.0" fitWidth="28.0" layoutX="638.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../tn/pidev/gui/images/delete.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnsupprimer" layoutX="634.0" layoutY="62.0" mnemonicParsing="false" onAction="#deleteJournal" prefHeight="21.0" prefWidth="28.0" style="-fx-background-color: transparent;" />
+      <TextField fx:id="searchfield" layoutX="463.0" layoutY="9.0" onAction="#RechercherBareme" prefHeight="20.0" prefWidth="172.0" promptText="Chercher" />
+      <Button fx:id="btn_tri" layoutX="632.0" layoutY="171.0" mnemonicParsing="false" onAction="#TrierJournal" prefHeight="29.0" prefWidth="40.0" style="-fx-background-color: transparent;" textFill="#4187b9">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Button>
+      <ImageView fx:id="trierimage" fitHeight="17.0" fitWidth="21.0" layoutX="640.0" layoutY="175.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../tn/pidev/gui/images/trier.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="btn_details" layoutX="132.0" layoutY="561.0" mnemonicParsing="false" onAction="#details" text="Voir image.." />
+      <Button fx:id="cmItem2" layoutX="233.0" layoutY="561.0" mnemonicParsing="false" onAction="#print" text="Imprimer" />
+      <Label fx:id="fxcount" layoutX="531.0" layoutY="556.0" onDragDetected="#countJournal" prefHeight="34.0" prefWidth="68.0" text="Label" />
+      <ProgressBar fx:id="progressBar" layoutX="320.0" layoutY="564.0" prefWidth="200.0" progress="0.0" />
+      <Label fx:id="trierLabel" layoutX="638.0" layoutY="206.0" />
+   </children>
+</AnchorPane>

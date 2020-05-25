@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="550.0" prefWidth="748.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hunterclub.StatistiqueTotalChasseController">
+   <children>
+      <AnchorPane fx:id="scene" layoutX="8.0" layoutY="13.0" prefHeight="537.0" prefWidth="735.0" style="-fx-background-color: #E7E7E7;">
+         <children>
+            <BarChart fx:id="barchart2" layoutX="3.0" layoutY="237.0" prefHeight="284.0" prefWidth="721.0">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </BarChart>
+         </children>
+      </AnchorPane>
+      <BarChart fx:id="BarChart" layoutX="8.0" layoutY="13.0" prefHeight="256.0" prefWidth="735.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </BarChart>
+   </children>
+</AnchorPane>

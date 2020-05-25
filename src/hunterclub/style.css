@@ -1,0 +1,20 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+.parent {
+-fx-background-color: #fff;
+}
+.slidebar{
+    -fx-background-color: #333645;
+    
+}
+.btns:hover
+{
+    -fx-background-color: #202332;
+    
+}
+.vbox
+{
+     -fx-background-image: url("..\tn\pidev\gui\images\hunters.png") ;
+}

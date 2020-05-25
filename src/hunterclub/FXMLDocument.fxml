@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="500.0" prefWidth="766.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hunterclub.FXMLDocumentController">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <AnchorPane fx:id="content" layoutX="13.0" layoutY="28.0" prefHeight="110.0" prefWidth="560.0" style="-fx-background-color: transparent;">
+         <children>
+            <Label fx:id="id_verifier_min" layoutX="55.0" layoutY="47.0" />
+            <TextField fx:id="fxmin" layoutX="25.0" layoutY="70.0" onKeyTyped="#verifier_min" promptText="Min" />
+            <TextField fx:id="fxmax" layoutX="203.0" layoutY="68.0" onKeyTyped="#verifier_max" promptText="Max" />
+            <Label layoutX="204.0" layoutY="14.0" prefHeight="27.0" prefWidth="149.0" text="Ajouter Bareme" textFill="#70722e">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="fxnote" layoutX="381.0" layoutY="65.0" onKeyTyped="#verifier_note" promptText="Note" />
+            <ImageView fitHeight="21.0" fitWidth="27.0" layoutX="290.0" layoutY="129.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../tn/pidev/gui/images/search.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="id_verifier_max" layoutX="204.0" layoutY="47.0" />
+            <Label fx:id="id_verifier_note" layoutX="384.0" layoutY="47.0" />
+            <TextField fx:id="searchfield" layoutX="325.0" layoutY="127.0" onAction="#RechercherBareme" prefHeight="25.0" prefWidth="143.0" promptText="Chercher" />
+         </children>
+      </AnchorPane>
+      <TableView fx:id="fxAfficher" layoutX="141.0" layoutY="189.0" prefHeight="262.0" prefWidth="335.0">
+        <columns>
+          <TableColumn fx:id="colmin" prefWidth="106.0" text="MIN" />
+            <TableColumn fx:id="colmac" prefWidth="91.0" text="Max" />
+            <TableColumn fx:id="colnote" prefWidth="137.0" text="Note" />
+        </columns>
+      </TableView>
+      <VBox layoutX="599.0" layoutY="87.0" prefHeight="383.0" prefWidth="111.0" spacing="30.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#AjouterBareme" prefHeight="25.0" prefWidth="123.0" style="-fx-background-color: black;" text="Ajouter" textFill="#f5f4f4">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="fxvider" cancelButton="true" mnemonicParsing="false" onAction="#viderBareme" prefHeight="25.0" prefWidth="123.0" style="-fx-background-color: black;" text="Vider" textFill="#f5f4f4">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#AfficherBareme" prefHeight="25.0" prefWidth="123.0" style="-fx-background-color: black;" text="Afficher" textFill="#f5f4f4">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#TrierBareme" prefHeight="25.0" prefWidth="123.0" style="-fx-background-color: black;" text="Trier" textFill="#f5f4f4">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="fxupdate" mnemonicParsing="false" onAction="#UpdateBareme" prefHeight="25.0" prefWidth="123.0" style="-fx-background-color: black;" text="Update" textFill="#f5f4f4">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="fxsupprimer" mnemonicParsing="false" onAction="#SupprimerBareme" prefHeight="25.0" prefWidth="123.0" style="-fx-background-color: black;" text="Supprimer" textFill="#f5f4f4">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Button>
+         </children>
+         <padding>
+            <Insets bottom="10.0" top="10.0" />
+         </padding>
+      </VBox>
+    </children>
+</AnchorPane>

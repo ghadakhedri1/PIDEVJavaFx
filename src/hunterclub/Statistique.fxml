@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hunterclub.StatistiqueController">
+   <children>
+      <SplitPane layoutX="64.0" layoutY="71.0" prefHeight="295.0" prefWidth="634.0">
+         <items>
+            <LineChart fx:id="LineChart" prefHeight="293.0" prefWidth="566.0" title="Statistique  mensuelle de Chasse">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </LineChart>
+         </items>
+      </SplitPane>
+      <SplitPane layoutX="61.0" layoutY="379.0" prefHeight="196.0" prefWidth="640.0">
+         <items>
+            <PieChart fx:id="PieChart" prefHeight="194.0" prefWidth="626.0" />
+         </items>
+      </SplitPane>
+      <Button fx:id="fxbutton" layoutX="85.0" layoutY="11.0" mnemonicParsing="false" onAction="#afficherscore" prefHeight="42.0" prefWidth="67.0" style="-fx-background-color: hh;" />
+      <ImageView fx:id="fximage" fitHeight="42.0" fitWidth="76.0" layoutX="98.0" layoutY="12.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../tn/pidev/gui/images/trophy.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

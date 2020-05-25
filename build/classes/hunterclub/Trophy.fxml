@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hunterclub.TrophyController">
+   <children>
+      <Label fx:id="idscore" layoutX="447.0" layoutY="141.0" textFill="#221e1e">
+         <font>
+            <Font name="Ebrima" size="16.0" />
+         </font></Label>
+      <Button fx:id="fxbutton" layoutX="177.0" layoutY="271.0" mnemonicParsing="false" onAction="#afficherscore" prefHeight="35.0" prefWidth="118.0" style="-fx-background-color: #E5E5E5;" text="Click Me">
+         <font>
+            <Font size="18.0" />
+         </font></Button>
+      <Label fx:id="idtotalchasse" layoutX="478.0" layoutY="190.0" textFill="#221e1e">
+         <font>
+            <Font name="Ebrima" size="16.0" />
+         </font></Label>
+      <Label fx:id="labelnbchasse" layoutX="366.0" layoutY="192.0" textFill="#1b1919">
+         <font>
+            <Font name="Ebrima Bold" size="16.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect></Label>
+      <Label fx:id="labelscore" layoutX="366.0" layoutY="140.0" prefHeight="26.0" prefWidth="75.0" textFill="#1b1919">
+         <font>
+            <Font name="Ebrima Bold" size="16.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect></Label>
+      <ImageView fx:id="fximage" fitHeight="203.0" fitWidth="209.0" layoutX="136.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../tn/pidev/gui/images/trophéé.jpg" />
+         </image>
+      </ImageView>
+      <Label fx:id="idlabel" layoutX="448.0" layoutY="237.0" textFill="#221e1e">
+         <font>
+            <Font name="Ebrima" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="labelLavel" layoutX="366.0" layoutY="235.0" prefHeight="26.0" prefWidth="75.0" textFill="#1b1919">
+         <font>
+            <Font name="Ebrima Bold" size="16.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect>
+      </Label>
+      <Label fx:id="labelname" layoutX="368.0" layoutY="92.0" prefHeight="26.0" prefWidth="99.0" textFill="#1b1919">
+         <font>
+            <Font name="Ebrima Bold" size="16.0" />
+         </font>
+         <effect>
+            <Glow />
+         </effect>
+      </Label>
+      <Label fx:id="idname" layoutX="467.0" layoutY="97.0" prefHeight="17.0" prefWidth="110.0" />
+      <Button fx:id="btn_stop" layoutX="41.0" layoutY="25.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="40.0" style="-fx-background-color: transperent;" />
+      <Button fx:id="btn_pause" layoutX="110.0" layoutY="26.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="40.0" style="-fx-background-color: transperent;" />
+      <Button fx:id="btn_play" layoutX="184.0" layoutY="26.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="40.0" style="-fx-background-color: transperent;" />
+      <ImageView fx:id="playimg" fitHeight="32.0" fitWidth="40.0" layoutX="183.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../tn/pidev/gui/images/play.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="pauseimg" fitHeight="32.0" fitWidth="30.0" layoutX="114.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../tn/pidev/gui/images/pause.png" />
+         </image>
+      </ImageView>
+      <ImageView fx:id="stopimg" fitHeight="32.0" fitWidth="40.0" layoutX="45.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../tn/pidev/gui/images/stop.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
